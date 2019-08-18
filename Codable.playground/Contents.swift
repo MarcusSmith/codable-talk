@@ -2,19 +2,21 @@ import Foundation
 
 let jsonData = """
 {
+  "id": 1,
   "name": "Codable Deep Dive",
-  "speaker": "Marcus Smith"
+  "speaker": "Marcus Smith",
+  "startTime": "2019-08-27T11:30:00-0600",
+  "endTime": "2019-08-27T12:15:00-0600"
 }
 """.data(using: .utf8)!
 
 struct Talk: Codable {
+    let id: Int?
     let name: String
     let speaker: String
+    let startTime: Date
+    let endTime: Date
 }
 
-let codableTalk = try! JSONDecoder().decode(Talk.self, from: jsonData)
-
-let arTalk = Talk(name: "Build immersive experiences with ARKit and CoreLocation", speaker: "Eric Internicola")
-
-let data = try! JSONEncoder().encode(arTalk)
-let string = String(bytes: data, encoding: .utf8)
+let decoder = JSONDecoder()
+let talk = try! decoder.decode(Talk.self, from: jsonData)
