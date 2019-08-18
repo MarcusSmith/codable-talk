@@ -7,7 +7,11 @@ let jsonData = """
 }
 """.data(using: .utf8)!
 
-struct Talk {
+struct Talk: Codable {
     let name: String
     let speaker: String
 }
+
+let codableTalk = try! JSONDecoder().decode(Talk.self, from: jsonData)
+
+let arTalk = Talk(name: "Build immersive experiences with ARKit and CoreLocation", speaker: "Eric Internicola")
