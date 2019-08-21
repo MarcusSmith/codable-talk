@@ -9,7 +9,21 @@ let jsonData = """
 """.data(using: .utf8)!
 
 struct Talk: Codable {
-    let id: Int?
+    struct Identifier: Codable {
+        let value: Int
+        
+        init(from decoder: Decoder) throws {
+            let container = try decoder.singleValueContainer()
+            value = try container.decode(Int.self)
+        }
+        
+        mutating func encode(from encoder: Encoder) throws {
+            var container = encoder.singleValueContainer()
+            try container.encode(value)
+        }
+    }
+    
+    let id: Identifier?
     let name: String
     let speaker: String
 }
