@@ -3,9 +3,27 @@ import Foundation
 struct EnvironmentDecoder: Decoder {
     var environment: [String: String]
     
+    init(environment: [String: String],
+         userInfo: [CodingUserInfoKey : Any] = [:],
+         codingPath: [CodingKey] = [])
+    {
+        self.environment = environment
+        self.userInfo = userInfo
+        self.codingPath = codingPath
+    }
+    
+    init(processInfo: ProcessInfo = ProcessInfo.processInfo) {
+        self.environment = processInfo.environment
+        self.userInfo = [
+            CodingUserInfoKey.processName: processInfo.processName,
+            CodingUserInfoKey.processIdentifier: processInfo.processIdentifier
+        ]
+        self.codingPath = []
+    }
+    
     // Decoder
-    var userInfo: [CodingUserInfoKey : Any] = [:]
-    var codingPath: [CodingKey] = []
+    var userInfo: [CodingUserInfoKey : Any]
+    var codingPath: [CodingKey]
     
     // Keyed Container
     func container<Key>(keyedBy type: Key.Type) throws -> KeyedDecodingContainer<Key> where Key : CodingKey {

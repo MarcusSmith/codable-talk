@@ -14,6 +14,7 @@
 		2C9FDB7C230CBED700EB77C9 /* StringSingleValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FDB7B230CBED700EB77C9 /* StringSingleValueContainer.swift */; };
 		2C9FDB7E230CBFB300EB77C9 /* StringUnkeyedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FDB7D230CBFB300EB77C9 /* StringUnkeyedContainer.swift */; };
 		2C9FDB80230CC09600EB77C9 /* EnvironmentKeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FDB7F230CC09600EB77C9 /* EnvironmentKeyedDecodingContainer.swift */; };
+		2CDB2FC1230CE19F006EDB05 /* CodingUserInfoKey+ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB2FC0230CE19F006EDB05 /* CodingUserInfoKey+ProcessInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,7 @@
 		2C9FDB7B230CBED700EB77C9 /* StringSingleValueContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringSingleValueContainer.swift; sourceTree = "<group>"; };
 		2C9FDB7D230CBFB300EB77C9 /* StringUnkeyedContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUnkeyedContainer.swift; sourceTree = "<group>"; };
 		2C9FDB7F230CC09600EB77C9 /* EnvironmentKeyedDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentKeyedDecodingContainer.swift; sourceTree = "<group>"; };
+		2CDB2FC0230CE19F006EDB05 /* CodingUserInfoKey+ProcessInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CodingUserInfoKey+ProcessInfo.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		2C9FDB81230CC54B00EB77C9 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				2CDB2FC0230CE19F006EDB05 /* CodingUserInfoKey+ProcessInfo.swift */,
 				2C9FDB74230CBE1C00EB77C9 /* IntCodingKey.swift */,
 			);
 			path = Other;
@@ -166,6 +169,7 @@
 				2C9FDB80230CC09600EB77C9 /* EnvironmentKeyedDecodingContainer.swift in Sources */,
 				2C9FDB6B230CBDB300EB77C9 /* main.swift in Sources */,
 				2C9FDB7C230CBED700EB77C9 /* StringSingleValueContainer.swift in Sources */,
+				2CDB2FC1230CE19F006EDB05 /* CodingUserInfoKey+ProcessInfo.swift in Sources */,
 				2C9FDB77230CBE5900EB77C9 /* EnvironmentDecoder.swift in Sources */,
 				2C9FDB79230CBE7A00EB77C9 /* StringValueDecoder.swift in Sources */,
 				2C9FDB75230CBE1C00EB77C9 /* IntCodingKey.swift in Sources */,
