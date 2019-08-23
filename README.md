@@ -19,3 +19,12 @@ For convenience these have also been tagged by the step number they were:
 8: Codable Type using unkeyed value containers  
 
 Happy Coding!
+
+Codable blog posts:
+
+[Understanding and Extending Swift 4’s Codable](https://stablekernel.com/understanding-extending-swift-4-codable/)  
+[How To Decode Swift Types That Can’t Be Decoded](https://stablekernel.com/how-to-decode-swift-types-that-cant-be-decoded/)  
+
+Coming Soon
+
+Writing a Custom Swift Decoder (for CKRecord)
